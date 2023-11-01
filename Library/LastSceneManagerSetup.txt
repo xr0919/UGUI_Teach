@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scripts/Exercises/New Scene.unity
+- path: "Assets/Scripts/Lesson18_UI\u4E8B\u4EF6\u76D1\u542C\u63A5\u53E3/New Scene.unity"
   isLoaded: 1
   isActive: 1
   isSubScene: 0
