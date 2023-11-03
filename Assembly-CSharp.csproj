@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\Lesson14_ScrollBar\Lesson14.cs" />
     <Compile Include="Assets\Scripts\Lesson16_Dropdown\Lesson16.cs" />
     <Compile Include="Assets\Scripts\Lesson9_RawImage\Lesson9.cs" />
+    <Compile Include="Assets\Scripts\Exercises\LongPress.cs" />
     <Compile Include="Assets\Scripts\Exercises\ChangeNamePanel.cs" />
     <Compile Include="Assets\Scripts\Lesson18_UI事件监听接口\Lesson18.cs" />
     <Compile Include="Assets\Scripts\Lesson8_Text\Lesson8.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\Scripts\Exercises\MusicData.cs" />
     <Compile Include="Assets\Scripts\Lesson12_Inputfield\Lesson12.cs" />
     <Compile Include="Assets\Scripts\Lesson10_Button\Lesson10.cs" />
+    <Compile Include="Assets\Scripts\Lesson19_EventTrigger\Lesson19.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

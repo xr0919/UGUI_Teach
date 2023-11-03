@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerObject : MonoBehaviour
 {
     public AudioClip ac;
+
+    public float moveSpeed = 10;
+    public float roundSpeed = 40;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +21,27 @@ public class PlayerObject : MonoBehaviour
         {
             Fire();
         }
+
+        //move()
+        if (nowMoveDir != Vector3.zero)
+        {
+            //朝目标方向转向
+            //this.transform.rotation=Quaternion.LookRotation(nowMoveDir);
+            this.transform.rotation=Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(nowMoveDir), roundSpeed * Time.deltaTime);
+            //朝面朝向移动
+            this.transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+
+        }
+
+    }
+
+    //移动
+    private Vector3 nowMoveDir = Vector3.zero;
+    public void Move(Vector2 dir)
+    {
+        nowMoveDir.x = dir.x;
+        nowMoveDir.y = 0;
+        nowMoveDir.z = dir.y;
     }
 
     public void Fire()
