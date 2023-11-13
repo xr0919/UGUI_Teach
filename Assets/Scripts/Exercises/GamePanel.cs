@@ -109,10 +109,22 @@ public class GamePanel : MonoBehaviour
     private void JoyDrag(BaseEventData data)
     {
         PointerEventData eventData = data as PointerEventData;
+        //旧方法:加偏移量
+        //imgJoy.position += new Vector3(eventData.delta.x, eventData.delta.y, 0);
         //imgJoy.transform.position += new Vector3(eventData.delta.x, eventData.delta.y, 0);
-        imgJoy.position += new Vector3(eventData.delta.x, eventData.delta.y, 0);
+
+        //新方法 RectTransformUtility 更准确
+        Vector2 nowPos;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            imgJoy.parent as RectTransform,
+            eventData.position,
+            eventData.enterEventCamera,
+            out nowPos
+            );
+        imgJoy.position = nowPos;
+
         //有专门参数获得相对锚点的点
-        if(imgJoy.anchoredPosition.magnitude > 150)//如果出界
+        if (imgJoy.anchoredPosition.magnitude > 150)//如果出界
         {
             //Joy自动拉回来
             //获取向量长度

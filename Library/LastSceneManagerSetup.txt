@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scripts/Exercises/New Scene.unity
+- path: Assets/Scripts/Lesson25_Canvas Group/New Scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
